@@ -1,5 +1,7 @@
 PickleSandbox::Application.routes.draw do
 
+  namespace :admin do resources :users end
+
   resources :products, :only => [:index, :show]
 
   # The priority is based upon order of creation:

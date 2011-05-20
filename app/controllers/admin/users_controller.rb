@@ -1,4 +1,6 @@
 class Admin::UsersController < ApplicationController
+  before_filter { I18n.locale = :ja }
+
   # GET /admin/users
   # GET /admin/users.xml
   def index

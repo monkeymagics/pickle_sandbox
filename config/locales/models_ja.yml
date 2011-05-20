@@ -1,9 +1,12 @@
 ja:
-  activemodel:
+  activerecord:
     models:
       product: "商品"
+      admin/user: "管理者"
 
     attributes:
       product:
         name: "名称"
         price: "価格"
+      admin/user:
+        name: "名前"

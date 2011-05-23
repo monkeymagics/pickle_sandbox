@@ -7,11 +7,11 @@
   システム管理者
   がユーザのCRUDを行いたい
   
-#   Scenario: Register new user
-#     Given I am on the new user page
-#     When I fill in "Name" with "name 1"
-#     And I press "Create"
-#     Then I should see "name 1"
+  シナリオ: ユーザを登録する
+    前提 "the new user page"ページを表示している
+    もし "名前"に"totty"と入力する
+    かつ "登録する"ボタンをクリックする
+    ならば "totty"と表示されていること
 
 #   Scenario: Delete user
 #     Given the following users:

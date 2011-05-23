@@ -24,6 +24,7 @@ require File.expand_path(File.join(File.dirname(__FILE__), "..", "support", "pat
 require File.expand_path(File.join(File.dirname(__FILE__), "..", "support", "selectors"))
 
 前提 /^"([^"]*)"ページを表示している$/ do |page_name|
+  I18n.locale = :ja
   Given %{I am on #{page_name}}
 end
 

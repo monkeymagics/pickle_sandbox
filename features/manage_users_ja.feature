@@ -9,8 +9,8 @@
   
   シナリオ: ユーザを登録する
     前提 "the new user page"ページを表示している
-    もし "Name"に"totty"と入力する
-    かつ "Create"ボタンをクリックする
+    もし "名前"に"totty"と入力する
+    かつ "登録する"ボタンをクリックする
     ならば "totty"と表示されていること
 
 #   Scenario: Delete user

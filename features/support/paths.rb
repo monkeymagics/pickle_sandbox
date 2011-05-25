@@ -11,6 +11,12 @@ module NavigationHelpers
 
     when /the home\s?page/
       '/'
+    when %r{the new admin[/_ ]user page}
+      new_admin_user_path
+
+    when %r{the new admin[/_ ]user page}
+      new_admin_user_path
+
     when /the new user page/
       new_admin_user_path
 

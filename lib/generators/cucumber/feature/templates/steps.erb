@@ -1,14 +1,14 @@
-Given /^the following <%= plural_name %>:$/ do |<%= plural_name %>|
-  <%= class_name %>.create!(<%= plural_name %>.hashes)
+Given %r{^the following <%= underscore_plural_name %>:$} do |<%= plural_table_name %>|
+  <%= class_name %>.create!(<%= plural_table_name %>.hashes)
 end
 
-When /^I delete the (\d+)(?:st|nd|rd|th) <%= singular_name %>$/ do |pos|
-  visit <%= plural_name %>_path
+When %r{^I delete the (\d+)(?:st|nd|rd|th) <%= underscore_singular_name %>$} do |pos|
+  visit <%= plural_table_name %>_path
   within("table tr:nth-child(#{pos.to_i+1})") do
     click_link "Destroy"
   end
 end
 
-Then /^I should see the following <%= plural_name %>:$/ do |expected_<%= plural_name %>_table|
-  expected_<%= plural_name %>_table.diff!(tableish('table tr', 'td,th'))
+Then %r{^I should see the following <%= underscore_plural_name %>:$} do |expected_<%= plural_table_name %>_table|
+  expected_<%= plural_table_name %>_table.diff!(tableish('table tr', 'td,th'))
 end

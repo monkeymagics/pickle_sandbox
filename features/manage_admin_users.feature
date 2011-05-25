@@ -22,3 +22,8 @@ Feature: Manage admin/users
       |name 1|
       |name 2|
       |name 4|
+
+  Scenario: Show user
+    Given a admin/user exists with name: "akm"
+    When I go to the show page for that admin/user
+    Then I should see "akm"
